@@ -20,6 +20,7 @@
     --panel: #1e1e22;
     --text: #f2f2f2;
     --muted: #b8b8b8;
+    --discord: #5865f2;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; scroll-padding-top: 80px; }
@@ -50,6 +51,8 @@
   nav ul { list-style: none; display: flex; gap: 18px; flex-wrap: wrap; }
   nav a { color: var(--text); font-size: 10px; }
   nav a:hover { color: var(--gold); text-decoration: none; }
+  nav a.nav-discord { color: #fff; background: var(--discord); padding: 4px 8px; border: 2px solid #000; }
+  nav a.nav-discord:hover { background: #4752c4; color: #fff; }
 
   section { padding: 90px 20px 60px; max-width: 1080px; margin: 0 auto; }
   h2 {
@@ -99,10 +102,10 @@
   }
   .btn:hover { background: #6fa535; text-decoration: none; }
   .btn:active { transform: translateY(2px); }
-  .btn.alt { background: #5865f2; box-shadow: inset -3px -3px 0 #3c45a5, inset 3px 3px 0 #8f9af5; color: #fff; }
+  .btn.alt { background: var(--discord); box-shadow: inset -3px -3px 0 #3c45a5, inset 3px 3px 0 #8f9af5; color: #fff; }
   .btn.alt:hover { background: #4752c4; }
   .copy-status { font-size: 9px; color: var(--diamond); margin-top: 14px; min-height: 14px; }
-  .launch-box {
+.launch-box {
     display: inline-block; max-width: 100%; margin: 8px auto 0; padding: 16px 20px;
     background: #1e1e22; border: 3px solid #000; box-shadow: 4px 4px 0 #0007;
   }
@@ -129,6 +132,16 @@
   }
   .icon { font-size: 26px; margin-bottom: 12px; display: block; }
   .card p { font-size: 10px; }
+
+  /* Staff */
+  .staff-card { border-top: 8px solid var(--role-color, var(--grass)); }
+  .staff-card .role { font-size: 9px; color: var(--role-color, var(--grass)); margin-bottom: 14px; display: block; }
+  .staff-card .staff-name { font-size: 11px; color: var(--text); margin-bottom: 6px; }
+  .staff-card .staff-note { font-size: 9px; color: var(--muted); }
+  .role-owner { --role-color: var(--gold); }
+  .role-admin { --role-color: #ff5555; }
+  .role-mod { --role-color: var(--diamond); }
+  .role-helper { --role-color: #9ddc5a; }
 
   /* Steps */
   .steps { counter-reset: step; list-style: none; display: grid; gap: 16px; }
@@ -158,6 +171,7 @@
   }
   .discord-box h2 { color: #fff; }
   .discord-box p { color: #e6e8ff; }
+  .discord-link { font-size: 9px; color: #e6e8ff; margin-top: 16px; word-break: break-all; }
 
   footer {
     background: #000;
@@ -189,7 +203,9 @@
     <li><a href="#features">Features</a></li>
     <li><a href="#join">Join</a></li>
     <li><a href="#rules">Rules</a></li>
+    <li><a href="#staff">Staff</a></li>
     <li><a href="#community">Community</a></li>
+    <li><a class="nav-discord" href="https://discord.gg/zcQfzCWZrU" target="_blank" rel="noopener">Discord</a></li>
   </ul>
 </nav>
 
@@ -264,6 +280,7 @@
     <li><b>Click Join Server</b> and read the welcome message. Have fun and build your dream!</li>
   </ol>
   <p style="margin-top:20px;">Bedrock players (phone, console, Windows 10/11): use the same address with port <b>19132</b> if prompted.</p>
+  <p style="margin-top:12px;">Need help joining? Ask on our Discord: <a href="https://discord.gg/zcQfzCWZrU" target="_blank" rel="noopener">discord.gg/zcQfzCWZrU</a></p>
 </section>
 
 <section id="rules">
@@ -278,12 +295,47 @@
   </ul>
 </section>
 
+<section id="staff">
+  <h2>Staff Team</h2>
+  <div class="grid">
+    <div class="card staff-card role-mod">
+      <span class="role">DEVELOPER</span>
+      <div class="staff-name"><a href="https://parth-swart.vercel.app" target="_blank" rel="noopener">Parth</a></div>
+      <p class="staff-note">Website and server developer.</p>
+    </div>
+    <div class="card staff-card role-admin">
+      <span class="role">ADMIN</span>
+      <div class="staff-name"><a href="https://www.youtube.com/@VickyIsLIve19" target="_blank" rel="noopener">Vicky</a></div>
+      <p class="staff-note">Manages server settings, events and staff.</p>
+    </div>
+    <div class="card staff-card role-helper">
+      <span class="role">MODERATOR</span>
+      <div class="staff-name"><a href="https://www.youtube.com/@VadilLive" target="_blank" rel="noopener">Laukik</a></div>
+      <p class="staff-note">Handles reports, chat and player disputes.</p>
+    </div>
+    <div class="card staff-card role-owner">
+      <span class="role">YOUTUBERS</span>
+      <div class="staff-name">
+        <a href="https://www.youtube.com/@TheGamerLiveStream" target="_blank" rel="noopener">Sairaj</a><br>
+        <a href="https://www.youtube.com/@ParzivalisLive" target="_blank" rel="noopener">Parzival</a><br>
+        <a href="https://www.youtube.com/@Datpadeislive" target="_blank" rel="noopener">datpadeislive</a><br>
+        <a href="https://www.youtube.com/@manntehalyani7816" target="_blank" rel="noopener">Manish</a><br>
+        <a href="https://www.youtube.com/@hectorbhaugaming" target="_blank" rel="noopener">HectorBhauGaming</a><br>
+        <a href="https://www.youtube.com/@Abhyaaaagaming" target="_blank" rel="noopener">Abhya Gaming</a>
+      </div>
+      <p class="staff-note">Check out our creators' YouTube channels.</p>
+    </div>
+  </div>
+  <p style="margin-top:24px;">Full staff list and roles are updated on our <a href="https://discord.gg/zcQfzCWZrU" target="_blank" rel="noopener">Discord</a>.</p>
+</section>
+
 <section id="community">
   <div class="discord-box">
     <h2>Join Our Community</h2>
     <p>Get server news, vote for rewards, report issues and meet other players on our Discord server.</p>
     <br>
     <a class="btn" style="background:#fff;color:#5865f2;border-color:#000;box-shadow:inset -3px -3px 0 #c9cdfb,inset 3px 3px 0 #fff;" href="https://discord.gg/zcQfzCWZrU" target="_blank" rel="noopener">Join Discord</a>
+    <p class="discord-link">https://discord.gg/zcQfzCWZrU</p>
   </div>
 </section>
 
@@ -298,10 +350,9 @@
     /*
      * LAUNCH SETTINGS — edit these two values before publishing.
      * Date/time format: YYYY-MM-DDTHH:MM:SS+05:30 (India Standard Time).
-     * Example: "2026-11-15T18:00:00+05:30"
      */
     var LAUNCH_AT = "2026-11-03T21:00:00+05:30";
-    var SERVER_IP = "sapnokasmp.xyz";
+    var SERVER_IP = "play.sapnokasmp.xyz";
 
     var revealBox = document.getElementById('ip-box');
     var countdownBox = document.getElementById('ip-countdown-box');
